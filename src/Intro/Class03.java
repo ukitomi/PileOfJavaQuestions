@@ -5,13 +5,13 @@ public class Class03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Solution3 s = new Solution3();
-		int[] arr = new int[]{7, 3, 2};
-		s.reverse(arr);
-		for ( int i = 0; i < arr.length; i++ ) {
-			System.out.println(arr[i]);
-		}
-		//System.out.println(arr);
-		System.out.println("Expected: 2, 3, 7");
+		int[][] arr = {{2, 3},{4, 5}, {1, 0}};
+		s.sum(arr);
+//		for ( int i = 0; i < arr.length; i++ ) {
+//			System.out.println(arr[i]);
+//		}
+		System.out.println(s.sum(arr));
+		System.out.println("Expected: 15");
 
 	}
 
@@ -76,5 +76,14 @@ class Solution3 {
 	// Given a two-dimensional array, calculate the sum of all its elements
 	// array = {{ 2, 3}, {4, 5}, {1, 0}}
 	// return 15 
+	public int sum(int[][] array) {
+	    int sum = 0;
+	    for ( int i = 0; i < array.length; i ++) {
+	    	for ( int j = 0; j < array[i].length; j ++ ) {
+	    		sum += array[i][j];
+	    	}
+	    }
+	    return sum;
+	}
 
 }
