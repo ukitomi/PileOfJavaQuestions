@@ -3,7 +3,7 @@ package Intro;
 public class Class02 {
 
 	public static void main(String[] args) {
-		Solution s = new Solution();
+		Solution2 s = new Solution2();
 		System.out.println("My Answer: " + s.power(3, 4));
 		System.out.println("Expected: 81");
 
@@ -11,7 +11,7 @@ public class Class02 {
 
 }
 
-class Solution {
+class Solution2 {
 
 	// Calculate the sum of all square numbers between 1 and n (inclusive).
 	// Example:
