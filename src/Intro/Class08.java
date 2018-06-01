@@ -4,6 +4,7 @@ public class Class08 {
 
 }
 
+// Implement a queue by using two stacks
 class QueueByTwoStacks {
 	
 	public Integer poll() {
