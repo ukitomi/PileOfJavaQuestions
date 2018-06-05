@@ -88,7 +88,7 @@ public class ClassicalBinarySearch {
 		if (array[right] == target) {
 			return right;
 		}
-
+		
 		return -1;
 	}
 
