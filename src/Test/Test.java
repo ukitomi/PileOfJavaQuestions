@@ -13,6 +13,9 @@ public class Test {
 			System.out.println(array[left]);
 			left ++;
 		}
+		
+		System.out.println(1^1);
+		System.out.println(0^1);
 		//System.out.println("My answer: " + test1.isPrime(3));
 		// 4199 is not prime
 
