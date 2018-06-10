@@ -159,21 +159,30 @@ public class LinkedListAddOns {
 		return true;
 	}
 	
-	public ListNode remove(ListNode head, int n) {
-		ListNode dummy = new ListNode(0);
-		ListNode cur = dummy;
-		while (head != null) {
-			if (head.value == n) {
-				cur.next = head.next;
-				head = head.next;
-				cur = cur.next;
-			}
-			else {
-				head = head.next;
-			}
+	public ListNode remove(ListNode head, int val) {
+		ListNode cur = head;
+		
+		// if no elements
+		if (head == null) {
+			return null;
 		}
 		
-		return dummy.next;
+		while ( cur.next != null) {
+			if (cur.next.value == val) {
+				cur.next = cur.next.next;
+			}
+			else {
+				cur = cur.next;
+			}
+		}
+
+		// lastly, check if the head.value == head
+		if (head.value == val) {
+			return head.next;
+		}
+		else {
+			return head;
+		}
 	}
 	
 	//public ListNode removeNthFromEnd(ListNode head, int n) {
