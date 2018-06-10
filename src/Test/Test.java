@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//sTest test1 = new Test();
+		Test test1 = new Test();
 		int[] array = new int[] {1, 2, 3, 4, 5};
 		int left = 0;
 		int right = array.length - 1;
@@ -18,6 +18,7 @@ public class Test {
 		System.out.println(0^1);
 		//System.out.println("My answer: " + test1.isPrime(3));
 		// 4199 is not prime
+		System.out.println(test1.trueFalseTest(7));
 
 	}
 
@@ -35,6 +36,21 @@ public class Test {
 		}
 		
 		return false;
+	}
+	
+	public int trueFalseTest(int n) {
+		if ( n > 5) {
+			System.out.println("n>5");
+			//return 5;
+		}
+		if ( n < 10) {
+			System.out.println("n<10");
+			//return 10;
+		}
+		
+		return -1;
+		
+		
 	}
 
 }
