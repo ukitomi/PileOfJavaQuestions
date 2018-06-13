@@ -1,0 +1,31 @@
+Selection Sort
+Merge Sort
+Quick Sort
+Rainbow Sort
+Move 0s to the End
+Fibonacci Number
+a to the power of b
+Classical Binary Search
+First Occurrence
+Last Occurrence
+Closest In Sorted Array
+K Closest In Sorted Array
+Search In Unknown Sized Sorted Array
+Search in Sorted Matrix I
+Queue By Two Stacks
+Stack With Min()
+Reverse Linked List
+Middle Node Of Linked List
+Check If Linked List Has A Cycle
+Insert in Sorted Linked List
+Merge Two Sorted Linked Lists
+ReOrder Linked List
+Partiton Linked List
+In-order Traveral Of Binary Tree
+Pre-order Traversal Of Binary Tree
+Post-order Traveral Of Binary Tree
+Check If Binary Tree Is Balanced
+Symmetric Binary Tree
+Tweaked Identical Binary Trees
+Is Binary Search Tree or Not
+Get Keys In Binary Search Tree In Given Range
