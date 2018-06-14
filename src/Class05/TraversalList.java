@@ -30,6 +30,8 @@ public class TraversalList {
 		t.printLevelOrder(five);
 	}
 	
+	
+	// iterative solution
 	public List<Integer> preOrder(TreeNode root) {
 		List<Integer> list = new ArrayList<Integer>();
 		if (root == null) {
@@ -40,12 +42,45 @@ public class TraversalList {
 		stack.push(root);
 		
 		while (!stack.isEmpty()) {
-			
+			TreeNode cur = stack.pollFirst();
+			list.add(cur.key);
+			if (cur.right != null) {
+				stack.offerFirst(cur.right);
+			}
+			if (cur.left != null) {
+				stack.offerFirst(cur.left);
+			}
 		}
-		
 		
 		return list;
 	}
+	
+	public List<Integer> inOrder(TreeNode root) {
+		List<Integer> list = new ArrayList<Integer>();
+		if (root == null) {
+			return list;
+		}
+		
+		Deque<TreeNode> stack = new LinkedList<TreeNode>();
+		TreeNode helper = root;
+		
+		while ( helper != null || !stack.isEmpty()) {
+			if (helper != null) {
+				stack.offerFirst(helper);
+				helper = helper.left;
+			}
+			else // left subtree of the root is finished 
+			{
+				TreeNode parent = stack.pollFirst();
+				list.add(parent.key);
+				helper = parent.right;
+				
+			}
+		}
+		
+		return list;
+	}
+
 	public void printLevelOrder(TreeNode root) {
 		int h = getHeight(root);
 		for (int i = 1; i <= h; i++) {

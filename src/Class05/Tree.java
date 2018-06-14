@@ -1,5 +1,10 @@
 package Class05;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Tree {
 
 	public static void main(String[] args) {
@@ -89,6 +94,48 @@ public class Tree {
 		
 		return isTweakedIdentical(one.left, two.left) && isTweakedIdentical(one.right, two.right) || 
 				isTweakedIdentical(one.left, two.right) && isTweakedIdentical(one.right, two.left);
+		
+	}
+	
+	  public boolean isBST(TreeNode root) {
+		    if (root == null) return true;
+		    return isBst(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+	  }
+	  
+	  public boolean isBst(TreeNode root, int min, int max) {
+		  if (root == null) {
+			  return true;
+		  }
+		  if (root.key < min || root.key > max) {
+			  return false;
+		  }
+		  
+		  // left is less than root, right is larger than root
+		  return isBst(root.left, min, root.key - 1) && isBst(root.right, root.key + 1, max);
+	  }
+	  
+	public List<Integer> getRange(TreeNode root, int min, int max) {
+		List<Integer> lst = new ArrayList<Integer>();
+		if (root == null) return lst;
+		
+		Deque<TreeNode> stack = new LinkedList<TreeNode>();
+		TreeNode helper = root;
+		
+		while (helper != null || !stack.isEmpty()) {
+			if (helper != null) {
+				stack.offerFirst(helper);
+				helper = helper.left;
+			}
+			else {
+				TreeNode parent = stack.pollFirst();
+				if (parent.key >= min && parent.key <= max) {
+					lst.add(parent.key);
+				}
+				helper = parent.right;
+			}
+		}
+		
+		return lst;
 		
 	}
 }
