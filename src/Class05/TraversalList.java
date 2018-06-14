@@ -65,7 +65,7 @@ public class TraversalList {
         if (root == null)
             return;
         if (level == 1)
-            System.out.print(root.value + " ");
+            System.out.print(root.key + " ");
         else if (level > 1)
         {
             printGivenLevel(root.left, level-1);

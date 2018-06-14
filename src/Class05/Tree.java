@@ -26,33 +26,15 @@ public class Tree {
 	}
 	
 	public void preOrder(TreeNode root) {
-		if (root == null) {
-			return;
-		}
-		
-		System.out.println(root.value);
-		preOrder(root.left);
-		preOrder(root.right);
+
 	}
 	
 	public void inOrder(TreeNode root) {
-		if (root == null) {
-			return;
-		}
-		
-		inOrder(root.left);
-		System.out.println(root.value);
-		inOrder(root.right);
+
 	}
 	
 	public void postOrder(TreeNode root) {
-		if (root == null) {
-			return;
-		}
-		
-		postOrder(root.left);
-		postOrder(root.right);
-		System.out.println(root.value);
+
 	}
 	
 	public int getHeight(TreeNode root) {
@@ -63,11 +45,6 @@ public class Tree {
 	}
 	
 	public boolean isBalanced(TreeNode root) {
-//		if (getHeight(root.left) - getHeight(root.right) > 1) {
-//			return false;
-//		}
-//		return true;
-		
 		if (root == null) {
 			return true;
 		}
@@ -80,28 +57,49 @@ public class Tree {
 		return true;
 	}
 	
-	public boolean isSymmetric(TreeNode left, TreeNode right) {
+	public boolean isSymmetric(TreeNode root) {
+		// Write your solution here
+		if (root == null)
+			return true;
+		return symmetricCheck(root.left, root.right);
+	}
+
+	public boolean symmetricCheck(TreeNode left, TreeNode right) {
 		if (left == null && right == null) {
 			return true; // base case 1
-		}
-		else if (left == null || right == null) {
-			return false; // base case 2 + 3 
-		}
-		else if (left.value != right.value) {
+		} else if (left == null || right == null) {
+			return false; // base case 2 + 3
+		} else if (left.key != right.key) {
 			return false; // base case
 		}
+
+		return symmetricCheck(left.left, right.right) && symmetricCheck(left.right, right.left);
+	}
+	
+	public boolean isTweakedIdentical(TreeNode one, TreeNode two) {
+		if (one == null && two == null) {
+			return true;
+		}
+		else if (one == null || two == null) {
+			return false;
+		}
+		else if (one.key != two.key) {
+			return false;
+		}
 		
-		return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
+		return isTweakedIdentical(one.left, two.left) && isTweakedIdentical(one.right, two.right) || 
+				isTweakedIdentical(one.left, two.right) && isTweakedIdentical(one.right, two.left);
+		
 	}
 }
 
 class TreeNode {
-	int value;
+	int key;
 	TreeNode left;
 	TreeNode right;
 	
-	public TreeNode(int value) {
-		this.value = value;
+	public TreeNode(int key) {
+		this.key = key;
 		this.left = null;
 		this.right = null;
 	}
