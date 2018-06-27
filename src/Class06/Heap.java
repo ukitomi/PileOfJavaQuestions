@@ -92,13 +92,11 @@ public class Heap {
 				minHeap.offer(new Cell(cur.row + 1, cur.column, matrix[cur.row + 1][cur.column]));
 				visited[cur.row + 1][cur.column] = true;
 			}
-
 			if (cur.column + 1 < column && !visited[cur.row][cur.column + 1]) {
 				minHeap.offer(new Cell(cur.row, cur.column + 1, matrix[cur.row][cur.column + 1]));
 				visited[cur.row][cur.column + 1] = true;
 			}
 		}
-
 		return minHeap.peek().value;
 
 	}
