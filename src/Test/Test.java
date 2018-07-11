@@ -14,11 +14,7 @@ public class Test {
 			left ++;
 		}
 		
-		System.out.println(1^1);
-		System.out.println(0^1);
-		//System.out.println("My answer: " + test1.isPrime(3));
-		// 4199 is not prime
-		System.out.println(test1.trueFalseTest(7));
+		System.out.println(0x10);
 
 	}
 

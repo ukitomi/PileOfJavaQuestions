@@ -29,3 +29,49 @@ Symmetric Binary Tree
 Tweaked Identical Binary Trees
 Is Binary Search Tree or Not
 Get Keys In Binary Search Tree In Given Range
+K Smallest In Unsorted Array
+Kth Smallest Number In Sorted Matrix
+Check If Binary Tree Is Completed
+Bipartite
+Get Keys In Binary Tree Layer By Layer
+All Subsets I
+All Permutations I
+All Valid Permutations Of Parentheses I
+Combination Of Coins
+Top K Frequent Words
+Missing Number I
+Common Numbers Of Two Sorted Arrays
+Remove Adjacent Repeated Characters I
+Remove Adjacent Repeated Characters IV
+Determine If One String Is Another's Substring
+Remove Spaces
+Remove Certain Characters
+All Permutations II
+Reverse Words In A Sentence I
+String Replace
+Decompress String II
+ReOrder Array
+Longest Substring Without Repeating Characters
+Reverse String
+Right Shift By N Charaters
+All Anagrams
+Fibonacci Number(DP)
+Power Of Two(DP)
+Number Of Different Bits
+All Unique Characters II
+Hexadecimal Representation
+Longest Ascending SubArray
+Max Product Of Cutting Rope
+Array Hopper I
+Array Hopper II
+Dictionayr Word I
+Edit Distance
+Largest Square Of 1s
+Largest SubArary Sum
+Longest Consecutive 1s
+Longest Cross Of 1s
+Largest X Of 1s
+Largest SubMatrix Sum
+FREE QUESTION!
+Identical Binary Tree
+
